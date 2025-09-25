@@ -650,7 +650,7 @@ Contributors: Kris Jurka and Abhijit Menon-Sen\</p>
 Contributor: Emil Wojak</p>
 <h3 dir="auto">
 <a href="#netgear-nsdp" aria-hidden="true" class="anchor" id="netgear-nsdp"></a>Netgear NSDP</h3>
-<p dir="auto"><a href="/uploads/__moin_import__/attachments/SampleCaptures/ndsp_v2.pcapng.gz">ndsp_v2.pcapng.gz</a> <a href="https://en.wikipedia.org/wiki/Netgear_NSDP" rel="nofollow noreferrer noopener" target="_blank">https://en.wikipedia.org/wiki/Netgear_NSDP</a> upload a new Firmware via Netgear <a href="/SmartUtility">SmartUtility</a>. Switch Netgear GS748Tv3 is 192.168.0.239.</p>
+<p dir="auto"><a href="/uploads/__moin_import__/attachments/SampleCaptures/ndsp_v2.pcapng.gz">ndsp_v2.pcapng.gz</a> <a href="https://en.wikipedia.org/wiki/Netgear_NSDP" rel="nofollow noreferrer noopener" target="_blank">https://en.wikipedia.org/wiki/Netgear_NSDP</a> upload a new Firmware via Netgear <a href="/SmartUtility">SmartUtility</a>. Switch Netgear GS748Tv3 is 192.168.x.x.</p>
 <h3 dir="auto">
 <a href="#vendorlanprotocolfamily" aria-hidden="true" class="anchor" id="vendorlanprotocolfamily"></a>VendorLanProtocolFamily</h3>
 <p dir="auto">Extreme Networks</p>
@@ -971,7 +971,7 @@ Description: Sample Witness traffic</p>
 <h4 dir="auto">
 <a href="#example-2-dissection-of-encrypted-and-udp-encapsulated-ikev2-and-esp-messages" aria-hidden="true" class="anchor" id="example-2-dissection-of-encrypted-and-udp-encapsulated-ikev2-and-esp-messages"></a>Example 2: Dissection of encrypted (and UDP-encapsulated) <a href="/IKEv2">IKEv2</a> and <a href="/ESP">ESP</a> messages</h4>
 <p dir="auto">Archive: <a href="/uploads/dc5b30a117424e6ed21c726771a4006b/ipsec_ikev2+esp_aes-gcm_aes-ctr_aes-cbc.tgz">ipsec_ikev2+esp_aes-gcm_aes-ctr_aes-cbc.tgz</a></p>
-<p dir="auto">A VPN client (192.168.245.131) behind a NAT device connects three times to a VPN gateway (172.16.15.92) using IKEv2, the user sends some pings through the VPN tunnel (192.168.225.0/24) to the gateway (192.168.225.1), which are returned successfully, and disconnects. The three connections differ by the AES operation modes (AES-GCM, AES-CTR, and AES-CBC, in that order) used for encrypting the IKE_AUTH and ESP messages:</p>
+<p dir="auto">A VPN cli(192.168.x.x) behind a NAT device connects three times to a VPN gateway (172.16.15.92) using IKEv2, the user sends some pings through the VPN tunnel (192.168.225.0/24) to the gateway (192.168.x.x), which are returned successfully, and disconnects. The three connections differ by the AES operation modes (AES-GCM, AES-CTR, and AES-CBC, in that order) used for encrypting the IKE_AUTH and ESP messages:</p>
 <table dir="auto">
 <thead>
 <tr>
