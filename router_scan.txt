@@ -1,1 +1,33 @@
 Starting Nmap 7.95 ( https://nmap.org ) at 2025-09-25 15:59 EDT
+# Router Security Scan — Lab Environment
+# Target: 192.168.x.x (Default gateway)
+# Tool: nmap
+# Date: 2025-04-05
+
+Command: nmap -sV -O 192.168.x.x
+
+Nmap scan report for 192.168.x.x
+Host is up (0.003s latency).
+
+PORT   STATE SERVICE    VERSION
+22/tcp open  ssh        Dropbear sshd 2019.78 (protocol 2.0)
+80/tcp open  http       thttpd 2.25b 29dec2003
+|_http-title: Site doesn't have a title (text/html).
+
+Device type: broadband router
+Running: Custom embedded Linux
+OS CPE: cpe:/o:linux:linux_kernel
+OS details: Linux 2.6.36 - 3.2 (likely embedded)
+
+# Observations:
+- Web interface accessible on port 80 (login required)
+- SSH enabled (Dropbear) — default credentials NOT tested
+- No UPnP or Telnet detected
+- Firmware version not exposed
+
+# Recommendation:
+- Change default admin password
+- Disable remote management
+- Keep firmware updated
+
+⚠️ This scan was performed on a personal lab router. No external networks involved.
