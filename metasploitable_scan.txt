@@ -1,2 +1,39 @@
 Starting Nmap 7.95 ( https://nmap.org ) at 2025-09-24 17:27 EDT
 Nmap done: 1 IP address (0 hosts up) scanned in 1.66 seconds
+# Nmap Scan Results — Metasploitable2
+# Command: nmap -sV -sC -p- 192.168.x.x
+# Date: 2025-04-05
+
+Starting Nmap 7.92 ( https://nmap.org )
+Nmap scan report for 192.168.x.x
+Host is up (0.00045s latency).
+Not shown: 65525 closed tcp ports (reset)
+
+PORT     STATE SERVICE     VERSION
+21/tcp   open  ftp         vsftpd 2.3.4
+|_ftp-anon: Anonymous FTP login allowed (FTP code 230)
+22/tcp   open  ssh         OpenSSH 4.7p1 Debian 8ubuntu1 (protocol 2.0)
+23/tcp   open  telnet      Linux telnetd
+25/tcp   open  smtp        Postfix smtpd
+|_smtp-commands: metasploitable.localdomain, PIPELINING, SIZE 10240000, VRFY, ETRN, STARTTLS, ENHANCEDSTATUSCODES, 8BITMIME, DSN
+53/tcp   open  domain      ISC BIND 9.4.2
+80/tcp   open  http        Apache httpd 2.2.8 ((Ubuntu) DAV/2)
+|_http-title: Metasploitable2 - Linux
+| davtest: 
+|   WARNING: Cannot connect to webdav
+139/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+445/tcp  open  netbios-ssn Samba smbd 3.0.20-Debian (workgroup: WORKGROUP)
+|_smb-vuln-ms08-067: VULNERABLE (Remote Code Execution)
+3128/tcp open  http-proxy  Squid http proxy 2.6.STABLE18
+3306/tcp open  mysql       MySQL 5.0.51a-3ubuntu5
+|_mysql-info: Protocol: 10
+
+Service Info: Host:  metasploitable.localdomain; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+# Key Findings:
+- vsftpd 2.3.4 → known backdoor (CVE-2011-2523)
+- Samba 3.0.20 → username map script RCE (CVE-2007-2447)
+- Anonymous FTP access enabled
+- SMBv1 with MS08-067 vulnerability
+
+Environment: Isolated lab only. No production use.
