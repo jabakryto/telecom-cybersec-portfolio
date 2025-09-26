@@ -1,1 +1,28 @@
 # Rezylitati skanirovania Nikto
+# Nikto Scan — DVWA (Damn Vulnerable Web App)
+# Command: nikto -h http://192.168.x.x/dvwa/
+# Date: 2025-04-05
+
+- Nikto v2.5.0
+---------------------------------------------------------------------------
++ Target IP:          192.168.x.x
++ Target Hostname:    192.168.x.x
++ Target Port:        80
++ Start Time:         2025-04-05 14:30:22
+
+---------------------------------------------------------------------------
++ Server: Apache/2.4.7 (Ubuntu)
++ /dvwa/: Cookie PHPSESSID created without the httponly flag.
++ /dvwa/login.php: 
+    - Allows login with default credentials (admin:password)
+    - Reflected XSS in "User Agent" field (if security level is low)
++ /dvwa/vulnerabilities/exec/: Command injection possible (low security level)
++ /dvwa/vulnerabilities/upload/: File upload without proper validation
++ OSVDB-3268: /dvwa/config/: Directory indexing enabled → config files may be exposed
++ OSVDB-3092: /dvwa/phpinfo.php: PHP info page exposed → reveals server config
+
+---------------------------------------------------------------------------
++ 7 issues reported (5 high, 2 medium)
+
+Note: DVWA is designed to be vulnerable. Findings are expected.
+Lab environment only.
