@@ -1,1 +1,16 @@
 #Rezylitaty skanirovania Dird
+# Directory Bruteforce on DVWA (Damn Vulnerable Web App)
+# Tool: dirb / gobuster
+# Target: http://192.168.x.x/dvwa/
+# Date: 2025-04-05
+
+Found directories:
+- /dvwa/                 (Status: 200)
+- /dvwa/images/          (Status: 200)
+- /dvwa/includes/        (Status: 200)
+- /dvwa/js/              (Status: 200)
+- /dvwa/hackable/        (Status: 200)  ← Contains uploadable files
+- /dvwa/config/          (Status: 403)  ← Forbidden (potential config leak if misconfigured)
+
+Note: DVWA is intentionally vulnerable for training purposes.
+Environment: Isolated lab (192.168.x.x/24)
