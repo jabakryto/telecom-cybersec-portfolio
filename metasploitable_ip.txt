@@ -1,1 +1,12 @@
 192.168.x.x
+# Metasploitable2 Target IP
+# Purpose: Vulnerable VM for penetration testing labs
+
+IP Address: 192.168.x.x
+
+Environment:
+- Host-only network (VMware/VirtualBox)
+- No internet access
+- Used for: service enumeration, exploit testing, post-exploitation practice
+
+Note: Metasploitable2 is an official vulnerable machine by Rapid7.
